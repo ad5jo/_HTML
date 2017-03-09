@@ -1,0 +1,33 @@
+    <html>
+    <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+         	function reply_click(clicked_id)
+			{
+			    //alert(clicked_id);
+			    if (clicked_id === "horizontal"){
+			    		alert("Place the ship horizontal. Set a variable to use in an if statement.");
+			    }
+			    else if (clicked_id === "vertical"){
+			    		alert("Place the ship vertical. Set a variable to use in an if statement.");
+			    }
+			    else if (clicked_id === "3"){
+			    		alert("Three");
+			    }
+			}
+
+    </script> 
+    </head>
+
+    <body>
+		the body
+		<br>
+				<button id="horizontal" onClick="reply_click(this.id)">Place H</button>
+				<button id="vertical" onClick="reply_click(this.id)">Place V</button>
+    </body>
+    </html>
+
+
+
+
