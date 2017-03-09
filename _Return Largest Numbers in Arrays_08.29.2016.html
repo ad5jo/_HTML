@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Test code</title>
+testing in the header
+
+</head>
+
+<body>
+<h1>_Return Largest Numbers in Arrays.html</h1>
+<br>
+Return an array consisting of the largest number from each provided sub-array. For simplicity, the provided array will contain exactly 4 sub-arrays.
+<br>
+Remember, you can iterate through an array with a simple for loop, and access each member with array syntax arr[i].
+<br><br>
+
+<script  type = "text/javascript">
+//console.log("24  " + s_);
+//document.write("false 30");
+//var sa_words = str.split(" ");
+
+// THIS IS NOT PASSING CODE
+function repeatStringNumTimes(str, num) {
+  // repeat after me
+
+	var s_return_val = "";
+
+	for(var i = 0; i < num ; i++)
+	{
+		//
+		s_return_val = s_return_val + str;
+	}
+
+  return s_return_val;
+}
+
+function truncateString(str, num) {
+  // Clear out that junk in your trunk
+	//document.write("<br>Clear out that junk <br>in your trunk<br>");
+	//String.prototype.slice()
+	var i_len = str.length;
+	document.write("<br>i_len is:  " + i_len);
+	var s_return_val = "";
+
+	var i_len = str.length;
+	var s_return_val = "";
+
+
+	if (num <= 3)
+	{
+		s_return_val = str.slice(0,num);
+		s_return_val = s_return_val + "...";
+	}
+	else if (i_len <= num)
+	{
+		s_return_val = str.slice(0,num);
+	}
+	else
+	{
+		s_return_val = str.slice(0,num - 3);
+		s_return_val = s_return_val + "...";
+	}
+
+
+  return s_return_val;
+}
+
+function largestOfFour(arr) {
+  // You can do this!
+	var i_cnt_a = 0;
+	var i_cnt_b = 0;
+	var a_res = arr.slice(0,1);
+	var numbers = [4, 9, 16, 25];
+  return a_big;
+}
+
+
+
+
+
+
+s = largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
+console.log("<br><br>result is:  " + s);
+document.write("<br><br>result is:  " + s);
+
+
+console.log("Done ");
+document.write("<br>Done");
+</script>
+</body>
+</html>
+
+<script>
+
+
+</script>

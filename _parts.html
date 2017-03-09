@@ -4,37 +4,38 @@
   <title>Parts</title>
 </head>
 <body>
-  <div id="div1">Request</div>
-  <button name="button" onclick="" >Reset Form</button>
-  <input type="text" value="TypeHere">
-  <p>A common form that includes input tags</p>
-<form action="getform.php" method="get">
-    <label>First name: <input type="text" /></label><br />
-     <label>Last name: <input type="text" /></label><br />
-        <label>E-mail: <input type="email" /></label><br />
-<input type="submit" value="Submit" />
-</form>
+	<div id="div1">Request</div>
+	<button name="button" onclick="" >Reset Form</button>
+	<input type="text" value="TypeHere">
+	<p>A common form that includes input tags</p>
+
+	<form action="getform.php" method="get">
+	    <label>First name: <input type="text" /></label><br />
+	    <label>Last name: <input type="text" /></label><br />
+	    <label>E-mail: <input type="email" /></label><br />
+		<input type="submit" value="Submit" />
+	</form>
   
   
   
-  <button name="button" onclick="" >Submit Order</button>
-  <script>
-  
+	<button name="button" onclick="" >Submit Order</button>
+
+
+	<script>
  //document.body.onload = addElement;
 
-function addElement () { 
-  // create a new div element 
-  // and give it some content 
-  var newDiv = document.createElement("div"); 
-  var newContent = document.createTextNode("Hi there and greetings!"); 
-  newDiv.appendChild(newContent); //add the text node to the newly created div. 
+		function addElement () { 
+		  // create a new div element 
+		  // and give it some content 
+		  var newDiv = document.createElement("div"); 
+		  var newContent = document.createTextNode("Hi there and greetings!"); 
+		  newDiv.appendChild(newContent); //add the text node to the newly created div. 
 
-  // add the newly created element and its content into the DOM 
-  var currentDiv = document.getElementById("div1"); 
-  document.body.insertBefore(newDiv, currentDiv); 
-}
+		  // add the newly created element and its content into the DOM 
+		  var currentDiv = document.getElementById("div1"); 
+		  document.body.insertBefore(newDiv, currentDiv); 
+		}
     </script>
-	
 	
 </body>
 
