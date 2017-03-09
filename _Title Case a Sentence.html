@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Test code</title>
+testing in the header
+<scr ipt type = "text/javascript">
+</head>
+
+<body>
+<h1>Title Case a Sentence</h1>
+
+<script  type = "text/javascript">
+//console.log("24  " + s_);
+//document.write("false 30");
+//var sa_words = str.split(" ");
+
+	function titleCase(str) {
+		var i_array_length;
+		var sa_words = str.split(" ");
+		i_array_length = sa_words.length;
+		for (i=0; i < i_array_length; i++)
+		{
+			//
+			console.log("i is  " + i);
+			sa_words[i]= sa_words[i].toLowerCase();
+			console.log("sa_words[i]  " + sa_words[i]);
+			sa_words[i]= sa_words[i].charAt(0).toUpperCase() + sa_words[i].slice(1);
+			console.log("sa_words[i]  " + sa_words[i]);
+		}
+
+  return sa_words.join(' ');;
+}
+
+var s = titleCase("I'm a little tea pot");
+console.log("s  " + s);
+
+
+console.log("Done ");
+</script>
+</body>
+</html>

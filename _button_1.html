@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<title>Test code</title>
+testing in the header
+
+</head>
+
+<body>
+<h1>_button_1.html</h1>
+<p>Click the button to trigger a function that will output "Hello World" in a p element with id="demo".</p>
+
+<br>
+
+
+<form action="#n" name="theForm">
+
+    <label for="gender">Gender: </label>
+    <input type="radio" name="genderS" value="1" checked> Male
+    <input type="radio" name="genderS" value="0" > Female<br><br>
+    <a href="javascript: submitForm()">Search</A>
+</form>
+
+<button onclick="myFunction()">Click me</button>
+
+<br>
+<div id="demo">original</div>
+<br>
+
+<script  type = "text/javascript">
+
+function myFunction() {
+    //document.getElementById("demo").innerHTML = "Hello World 2";
+    //$("demo").innerHTML = "Hello World 3";
+    $("#demo").text("hello");
+    console.log("hello");
+    
+}
+
+function create_question_div()
+{
+  $('body').html("<div id='question'>Question</div>")
+}
+
+function create_choices_div()
+{
+  $('body').html("<div id='choices'>choices</div>")
+}
+
+function submitForm() {
+	var s_i_val = $('input[name="genderS"]:checked').val();
+	alert("1 is M, 0 is F:" + s_i_val);
+    //var genderS =  findSelection("genderS");
+    //alert(genderS);
+}
+
+function findSelection(field) {
+    var test = 'document.theForm.' + field;
+    var sizes = test;
+
+    alert(sizes);
+        for (i=0; i < sizes.length; i++) {
+            if (sizes[i].checked==true) {
+            alert(sizes[i].value + ' you got a value');     
+            return sizes[i].value;
+        }
+    }
+}
+
+
+
+console.log("Done ");
+document.write("<br>Done");
+</script>
+
+</body>
+</html>
+
+<script>
+
+
+</script>

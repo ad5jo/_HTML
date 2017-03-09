@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+<p>This is the test2 page.</p>
+<script type = "text/javascript">
+function myFunction()
+{
+alert("Hello World!");
+}
+</script>
+</head>
+
+<body>
+
+<a class="link">Link</a>
+<script  type="text/javascript">
+     $("a.link").on("click",function(){
+         window.open('www.yourdomain.com','_blank');
+     });
+</script>
+
+<script>
+	var recipient="test";
+	var at = String.fromCharCode(64);
+
+	var cc0D0A ="%0D%0A"
+	var cc0D0A2 =escape('\r\n')
+	var dotcom="example.com";
+	var mail="mailto:";
+	var subject = "?subject=Parts Request";
+	var bodyold = "&body=my parts list: "+cc0D0A2+"1. Wire "+cc0D0A2+"2. pin "+cc0D0A2+"done."+cc0D0A2;
+	var body = "&body=my parts list: %0D%0A1%0D%0A2";
+	//myWindow=window.open(mail+recipient+at+dotcom + subject + bodyold);
+	//myWindow.close();
+</script>
+
+<script>
+    myWindow=window.open("mailto:emailaddress@example.com");
+    myWindow.close();
+</script>';
+<div onclick="OpenInNewTab();">Something To Click On</div>
+
+</body>
+</html>
+//wi ndow.open('mailto:test@example.com?subject=subject&body=body');

@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Test code</title>
+testing in the header
+//type = "text/javascript"
+
+
+</head>
+
+<body>
+<h1>palindrome</h1>
+
+<script>
+function palindrome(str) {
+// Good luck!
+console.log("str is " + str);
+var s_reversed;
+var s_forward = str;
+s_forward = s_forward.replace(/[^0-9a-z]/gi, '');
+console.log("21 s_forward is " + s_forward);
+
+s_forward = s_forward.replace("_", '');
+console.log("24 s_forward is " + s_forward);
+
+s_forward = s_forward.replace(" ","");
+s_forward = s_forward.toLowerCase();
+
+
+
+s_reversed = s_forward.split('').reverse().join('');
+console.log("29 s_forward is " + s_forward);
+
+
+if (s_reversed == s_forward)
+	{
+		document.write("true 25");
+		return true;
+	}
+ else
+	 {
+		 document.write("false 30");
+		 return false;
+	 }
+
+}
+palindrome("_eye");
+//palindrome("eye");
+//palindrome("not a palindrome");
+
+</script>
+</body>
+</html>

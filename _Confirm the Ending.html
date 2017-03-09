@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Test code</title>
+testing in the header
+<scr ipt type = "text/javascript">
+</head>
+
+<body>
+<h1>Confirm the Ending</h1>
+
+<script  type = "text/javascript">
+//console.log("24  " + s_);
+//document.write("false 30");
+//var sa_words = str.split(" ");
+
+// THIS IS PASSING CODE
+
+function confirmEnding(str, target) {
+  // "Never give up and good luck will find you."
+  // -- Falcor
+	var b_return_val = false;
+	console.log(str + " ");
+  var i_word_length = -1;
+  var i_longest_length = -1;
+  var i_array_length = 0;
+	var sa_words = str.split(" ");
+	var s_oneString = sa_words.join("");
+	console.log("s_oneString is " + s_oneString);
+	console.log(" " + sa_words[0]);
+	//console.log(" " + sa_words[1]);
+	//console.log(" " + sa_words[2]);
+  i_array_length = sa_words.length;
+	var i_target_word_length = target.length;
+
+var anyString = sa_words[i_array_length - 1].substring(sa_words[i_array_length - 1].length - i_target_word_length);
+console.log("anyString of i_target_word_length is " + anyString);
+
+console.log("i_array_length is " + i_array_length);
+  for (i=0; i < i_array_length; i++)
+    {
+      console.log(" " + i);
+      i_word_length = sa_words[i].length;
+
+
+      if (anyString == target)
+        {
+          b_return_val = true;
+        }
+
+    }
+
+  return b_return_val;
+}
+
+
+
+
+var s = confirmEnding("Bastian", "ian");
+var s2 = confirmEnding("Walking on water and developing software from a specification are easy if both are frozen", "specification");
+var s3 = confirmEnding("He has to give me a new name", "name");
+//titleCase("I'm a little tea pot");
+console.log("result is s  " + s);
+console.log("result is s2  " + s2);
+
+console.log("result is s3  " + s3);
+
+
+console.log("Done ");
+</script>
+</body>
+</html>
+
+<script>
+// String.prototype.substr() // str.substr(start[, length])
+// String.prototype.substring()
+</script>

@@ -1,0 +1,236 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Test code</title>
+testing in the header
+
+</head>
+
+<body>
+<h1>Mutations.html</h1>
+<br>
+Return true if the string in the first element of the array contains all of the letters of the string in the second element of the array.
+<br>
+For example, ["hello", "Hello"], should return true because all of the letters in the second string are present in the first, ignoring case.
+<br>
+The arguments ["hello", "hey"] should return false because the string "hello" does not contain a "y".
+<br>
+Lastly, ["Alien", "line"], should return true because all of the letters in "line" are present in "Alien".
+<br>
+Remember to use Read-Search-Ask if you get stuck. Write your own code.
+<br>
+Here are some helpful links:
+<br>
+String.prototype.indexOf()
+<br>
+Array.prototype.slice()
+Array.prototype.splice()
+
+<br><br>
+mutation(["hello", "hey"]) should return false.
+<br>
+mutation(["hello", "Hello"]) should return true.
+<br>
+mutation(["zyxwvutsrqponmlkjihgfedcba", "qrstu"]) should return true.
+<br>
+mutation(["Mary", "Army"]) should return true.
+<br>
+mutation(["Mary", "Aarmy"]) should return true.
+<br>
+mutation(["Alien", "line"]) should return true.
+<br>
+mutation(["floor", "for"]) should return true.
+<br>
+mutation(["hello", "neo"]) should return false.
+<br>
+mutation(["voodoo", "no"]) should return false
+
+<br><br>
+
+<script  type = "text/javascript">
+//console.log("24  " + s_);
+//document.write("false 30");
+//var sa_words = str.split(" ");
+
+function chunkArrayInGroups(arr, size) {
+  // Break it up.
+  return arr;
+}
+
+
+// THIS IS PASSING CODE
+function repeatStringNumTimes(str, num) {
+  // repeat after me
+
+	var s_return_val = "";
+
+	for(var i = 0; i < num ; i++)
+	{
+		//
+		s_return_val = s_return_val + str;
+	}
+
+  return s_return_val;
+}
+
+function truncateString(str, num) {
+  // Clear out that junk in your trunk
+	//document.write("<br>Clear out that junk <br>in your trunk<br>");
+	//String.prototype.slice()
+	var i_len = str.length;
+	document.write("<br>i_len is:  " + i_len);
+	var s_return_val = "";
+
+	var i_len = str.length;
+	var s_return_val = "";
+
+
+	if (num <= 3)
+	{
+		s_return_val = str.slice(0,num);
+		s_return_val = s_return_val + "...";
+	}
+	else if (i_len <= num)
+	{
+		s_return_val = str.slice(0,num);
+	}
+	else
+	{
+		s_return_val = str.slice(0,num - 3);
+		s_return_val = s_return_val + "...";
+	}
+
+
+  return s_return_val;
+}
+
+function largestOfFour(arr) {
+  // You can do this!
+	//console.log("<br><br>result is:  " + s);
+	console.log("<br>You can do this! ");
+	var a_return_val=[];
+
+	var i_counter_outer = 0;
+	var i_len_outer = 0; //a_chunks.lenght;
+	i_len_outer = arr.length;
+
+	while (i_counter_outer < i_len_outer)
+	{ // begin while "B"
+		document.write("Counting.." + i_counter_outer + "<br>");
+
+	var a_chunks = arr[i_counter_outer];
+	var a_each_element = a_chunks[0];
+	var i_len = 0; //a_chunks.lenght;
+	i_len = a_chunks.length;
+	console.log("line 80 a_chunks i_len:  ");
+	console.log(i_len);
+
+
+	var i_counter = 0;
+	console.log("line 82 i_counter:  " + i_counter);
+	while (i_counter < i_len) //i_counter < a_big.length
+	{ // begin while "A"
+		if (i_counter === 0)	{ //i_counter < 1
+			console.log("<br>i_counter is 0 I think ");
+			document.write("<br>i_counter is 0 I think ");
+			a_return_val.push (a_chunks[i_counter]);
+
+		}
+
+		else if(a_return_val[i_counter_outer] < a_chunks[i_counter])	{
+			a_return_val[i_counter_outer] = a_chunks[i_counter];
+		}
+
+		i_counter = i_counter + 1;
+	} //end while "A"
+	i_counter_outer = i_counter_outer + 1;
+} // end while "B"
+
+  return a_return_val;
+}
+
+
+//s = chunkArrayInGroups(["a", "b", "c", "d"], 2);
+function chunkArrayInGroups(arr, size) {
+  // Break it up.
+  var i_cnt = arr.length;
+  var a_return =[];
+  var a_bits = [];
+  var a = 0;
+  for (i=0;i < i_cnt;i=i + size )
+    {
+      a_bits = arr.slice(a, a + size);
+      a_return.push(a_bits);
+      a = a + size;
+    }
+  return a_return;
+}
+
+//s = chunkArrayInGroups(["a", "b", "c", "d"], 2);
+
+
+function slasher_2(arr, howMany) {
+  // it doesn't always pay to be first
+  var a_return_val = [];
+  var a_remaining = arr.splice(0,howMany);
+  a_return_val.push(arr);
+  arr = a_return_val;
+  return arr;
+}
+
+function slasher(arr, howMany) {
+  // it doesn't always pay to be first
+  var removed = arr.splice(0,howMany);
+
+  return arr;
+
+}
+//s = slasher([1, 2, 3], 2);
+//s = slasher([1, 2, 3], 0);
+//s = slasher([1, 2, 3], 9);
+//s = slasher(["burgers", "fries", "shake"], 1);
+
+function mutation(arr) {
+  var i_cnt = arr[1].length;
+  var a_return_val = true;
+
+  var arr_u0 = arr[0].toUpperCase();
+  var arr_u1 = arr[1].toUpperCase();
+
+  //for(int i = 0; i < array2.length; i++)
+  //{
+    //array2[i] = array2[i].toUpperCase();
+  //}
+
+  for (i=0; i < i_cnt; i++)
+  {
+    var s_test = arr_u0.indexOf(arr_u1[i]);
+    document.write(s_test);
+    if (s_test == -1)
+    {
+      a_return_val = false;
+    }
+  }
+  arr = a_return_val;
+  return arr;
+}
+
+//s = mutation(["hello", "hey"]);
+s = mutation(["hello", "Hello"]);
+
+console.log("<br><br>result is ==>:  " + s);
+document.write("<br><br>result is==>:  " + s);
+//console.log("<br><br>result is ==>:  " + s[1]);
+//document.write("<br><br>result is==>:  " + s[1]);
+
+
+console.log("Done ");
+document.write("<br>Done");
+</script>
+</body>
+</html>
+
+<script>
+
+
+</script>

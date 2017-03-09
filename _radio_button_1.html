@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<title>Test code</title>
+
+</head>
+
+<body>
+<h1>_radio_button.html</h1>
+<br>
+
+Using jQuery - very simple
+<br>
+<br>
+<!-- <form action="#n" name="theForm"> -->
+
+    <label for="gender">Gender: </label>
+    <input type="radio" name="genderS" value="1" > Male
+    <input type="radio" name="genderS" value="0" > Female<br><br>
+    <a href="javascript: submitForm()">Search</A>
+<!-- </form> -->
+
+
+
+<br><br>
+
+<script  type = "text/javascript">
+
+function submitForm() {
+	var s_i_val = $('input[name="genderS"]:checked').val();
+	alert("1 is M, 0 is F:" + s_i_val);
+
+}
+
+
+//s = mutation(["hello", "Hello"]);
+
+//console.log("<br><br>result is ==>:  " + s);
+//document.write("<br><br>result is==>:  " + s);
+
+console.log("Done ");
+document.write("<br>Done");
+</script>
+
+
+</body>
+</html>
+
+<script>
+
+
+</script>

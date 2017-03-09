@@ -1,0 +1,194 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Test code</title>
+testing in the header
+
+</head>
+
+<body>
+<h1>Slasher Flick.html</h1>
+<br>
+Return the remaining elements of an array after chopping off n elements from the head.
+<br>
+The head means the beginning of the array, or the zeroth index.
+
+<br>
+Array.prototype.slice()
+Array.prototype.splice()
+
+<br><br>
+
+slasher([1, 2, 3], 2) should return [3].
+<br>
+slasher([1, 2, 3], 0) should return [1, 2, 3].
+<br>
+slasher([1, 2, 3], 9) should return [].
+<br>
+slasher([1, 2, 3], 4) should return [].
+<br>
+slasher(["burgers", "fries", "shake"], 1) should return ["fries", "shake"].
+<br>
+slasher([1, 2, "chicken", 3, "potatoes", "cheese", 4],
+
+<br><br>
+
+<script  type = "text/javascript">
+//console.log("24  " + s_);
+//document.write("false 30");
+//var sa_words = str.split(" ");
+
+function chunkArrayInGroups(arr, size) {
+  // Break it up.
+  return arr;
+}
+
+
+// THIS IS PASSING CODE
+function repeatStringNumTimes(str, num) {
+  // repeat after me
+
+	var s_return_val = "";
+
+	for(var i = 0; i < num ; i++)
+	{
+		//
+		s_return_val = s_return_val + str;
+	}
+
+  return s_return_val;
+}
+
+function truncateString(str, num) {
+  // Clear out that junk in your trunk
+	//document.write("<br>Clear out that junk <br>in your trunk<br>");
+	//String.prototype.slice()
+	var i_len = str.length;
+	document.write("<br>i_len is:  " + i_len);
+	var s_return_val = "";
+
+	var i_len = str.length;
+	var s_return_val = "";
+
+
+	if (num <= 3)
+	{
+		s_return_val = str.slice(0,num);
+		s_return_val = s_return_val + "...";
+	}
+	else if (i_len <= num)
+	{
+		s_return_val = str.slice(0,num);
+	}
+	else
+	{
+		s_return_val = str.slice(0,num - 3);
+		s_return_val = s_return_val + "...";
+	}
+
+
+  return s_return_val;
+}
+
+function largestOfFour(arr) {
+  // You can do this!
+	//console.log("<br><br>result is:  " + s);
+	console.log("<br>You can do this! ");
+	var a_return_val=[];
+
+	var i_counter_outer = 0;
+	var i_len_outer = 0; //a_chunks.lenght;
+	i_len_outer = arr.length;
+
+	while (i_counter_outer < i_len_outer)
+	{ // begin while "B"
+		document.write("Counting.." + i_counter_outer + "<br>");
+
+	var a_chunks = arr[i_counter_outer];
+	var a_each_element = a_chunks[0];
+	var i_len = 0; //a_chunks.lenght;
+	i_len = a_chunks.length;
+	console.log("line 80 a_chunks i_len:  ");
+	console.log(i_len);
+
+
+	var i_counter = 0;
+	console.log("line 82 i_counter:  " + i_counter);
+	while (i_counter < i_len) //i_counter < a_big.length
+	{ // begin while "A"
+		if (i_counter === 0)	{ //i_counter < 1
+			console.log("<br>i_counter is 0 I think ");
+			document.write("<br>i_counter is 0 I think ");
+			a_return_val.push (a_chunks[i_counter]);
+
+		}
+
+		else if(a_return_val[i_counter_outer] < a_chunks[i_counter])	{
+			a_return_val[i_counter_outer] = a_chunks[i_counter];
+		}
+
+		i_counter = i_counter + 1;
+	} //end while "A"
+	i_counter_outer = i_counter_outer + 1;
+} // end while "B"
+
+  return a_return_val;
+}
+
+
+//s = chunkArrayInGroups(["a", "b", "c", "d"], 2);
+function chunkArrayInGroups(arr, size) {
+  // Break it up.
+  var i_cnt = arr.length;
+  var a_return =[];
+  var a_bits = [];
+  var a = 0;
+  for (i=0;i < i_cnt;i=i + size )
+    {
+      a_bits = arr.slice(a, a + size);
+      a_return.push(a_bits);
+      a = a + size;
+    }
+  return a_return;
+}
+
+//s = chunkArrayInGroups(["a", "b", "c", "d"], 2);
+
+
+function slasher_2(arr, howMany) {
+  // it doesn't always pay to be first
+  var a_return_val = [];
+  var a_remaining = arr.splice(0,howMany);
+  a_return_val.push(arr);
+  arr = a_return_val;
+  return arr;
+}
+
+function slasher(arr, howMany) {
+  // it doesn't always pay to be first
+  var removed = arr.splice(0,howMany);
+
+  return arr;
+
+}
+//s = slasher([1, 2, 3], 2);
+//s = slasher([1, 2, 3], 0);
+//s = slasher([1, 2, 3], 9);
+s = slasher(["burgers", "fries", "shake"], 1);
+
+console.log("<br><br>result is ==>:  " + s);
+document.write("<br><br>result is==>:  " + s);
+//console.log("<br><br>result is ==>:  " + s[1]);
+//document.write("<br><br>result is==>:  " + s[1]);
+
+
+console.log("Done ");
+document.write("<br>Done");
+</script>
+</body>
+</html>
+
+<script>
+
+
+</script>

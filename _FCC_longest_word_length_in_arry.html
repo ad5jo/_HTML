@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Test code</title>
+testing in the header
+<scr ipt type = "text/javascript">
+</head>
+
+<body>
+<h1>Longest word length</h1>
+
+<script  type = "text/javascript">
+//console.log("24 s_forward is " + s_forward);
+//document.write("false 30");
+
+
+function findLongestWord(str) {
+	console.log(str + " ");
+  var i_word_length = -1;
+  var i_longest_length = -1;
+  var i_array_length = 0;
+  var sa_words = str.split(" ");
+	console.log(" " + sa_words[0]);
+	console.log(" " + sa_words[1]);
+	console.log(" " + sa_words[2]);
+  i_array_length = sa_words.length;
+console.log("i_array_length is " + i_array_length);
+  for (i=0; i < i_array_length; i++)
+    {
+      console.log(" " + i);
+      i_word_length = sa_words[i].length;
+      if (i_word_length > i_longest_length)
+        {
+          console.log(" new long i_word_length " + i_word_length);
+					i_longest_length = i_word_length;
+        }
+				else {
+					{
+						console.log("use the old i_word_length " + i_word_length);
+					}
+				}
+    }
+  console.log("i_longest_length " + i_longest_length);
+  return i_longest_length;
+}
+
+var i_var = findLongestWord("The quick brown fox jumped over the lazy dog");
+console.log("Done " + i_var);
+</script>
+</body>
+</html>
