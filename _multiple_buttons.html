@@ -9,7 +9,9 @@ testing in the header
 
 <body>
 <h1>_button_1.html</h1>
-<p>Click the button to trigger a function that will output "Hello World" in a p element with id="demo".</p>
+<p>1 Click the button to trigger a function that will output "Hello World" in a p element with id="demo". The event is registered in the button element: onclick="myFunction()"</p>
+<br>
+<p>2 Click the button to trigger a function that will output "Hello World" in a p element with id="demo".</p>
 
 <br>
 
@@ -22,7 +24,14 @@ testing in the header
     <a href="javascript: submitForm()">Search</A>
 </form>
 
-<button onclick="myFunction()">Click me</button>
+<button id="id_the_button_1">1 Click me. The onclick in the button element</button>
+
+<br>
+<button id="id_the_button_2">2 Click me. The id is in the button element</button>
+
+<button type="button" onclick="myFunction(this)" id="1">Button1</button>
+<button type="button" onclick="myFunction(this)" id="2">Button2</button>
+<button type="button" onclick="myFunction(this)" id="3">Button3</button>
 
 <br>
 <div id="demo">original</div>
@@ -30,10 +39,27 @@ testing in the header
 
 <script  type = "text/javascript">
 
-function myFunction() {
+function myFunction(elem) {
+    // alert(elem.id);
+    $("#demo").text("Another click button " + elem.id);
+}
+
+var el1 = document.getElementById("id_the_button_1");
+var el2 = document.getElementById("id_the_button_2");
+el1.addEventListener("click", function(){
+    // alert("click1 triggered")
+    $("#demo").text("hello this is the 1 click button");
+}, false);
+
+el2.addEventListener("click", function(){
+    // alert("click2 triggered")
+    $("#demo").text("hello this is the 2 click button");
+}, false);
+
+function my_function_a_not_used() {
     //document.getElementById("demo").innerHTML = "Hello World 2";
     //$("demo").innerHTML = "Hello World 3";
-    $("#demo").text("hello");
+    $("#demo").text("hello this is the 1 click button");
     console.log("hello");
     
 }
@@ -72,12 +98,15 @@ function findSelection(field) {
 
 console.log("Done ");
 document.write("<br>Done");
+
+$("#id_the_button").on("click", function() {
+    $("#demo").text("hello this is the 1 click button");
+    console.log("you clicked the #id_the_button ");
+});
+
 </script>
 
 </body>
 </html>
 
-<script>
 
-
-</script>
