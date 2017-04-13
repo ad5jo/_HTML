@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>className</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<h1>className recursion</h1>
+
+			<div id="id_div"></div>
+
+			<script type="text/javascript">
+				var i_safety = 0;
+				var s_class ="";
+
+				function createClassName(){
+					createClassName.i++;
+					i_safety++;
+					s_class+="className ";
+					if(i_safety > 50){
+						console.log("safety ");
+					return;
+					}
+
+					if(createClassName.i > 50){
+					return;
+					}
+
+					console.log("className ");
+					var x = document.getElementById("id_div")
+					x.innerHTML=s_class;
+					createClassName();
+				}
+				createClassName();
+				var x = document.getElementById("id_div")
+				s_class+="Done\n";
+				x.innerHTML=s_class;
+			</script>
+		</div>
+	</body>
+</html>
